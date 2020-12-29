@@ -112,8 +112,8 @@ namespace EmployeePayrollUsingADO
                 EmployeeModel employeeModel = new EmployeeModel();
                 using (this.connection)
                 {
+                    //Get Basic Pay for Perticular Employee
                     string queryToViewBasicPayOfPerticularEmp = @"SELECT basic_pay FROM employee_payroll WHERE name = 'Abby'; ";
-                    
                     SqlCommand cmd = new SqlCommand(queryToViewBasicPayOfPerticularEmp, this.connection);
 
                     this.connection.Open();
@@ -137,6 +137,7 @@ namespace EmployeePayrollUsingADO
                     dr.Close();
                     this.connection.Close();
 
+                    //Get List of Employee who Joined between perticular range of date
                     string queryToViewEmployeeBetweenDate = @"SELECT * FROM employee_payroll WHERE start_date BETWEEN CAST('2017-01-30' as date) AND GETDATE(); ";
                     SqlCommand command2 = new SqlCommand(queryToViewEmployeeBetweenDate, this.connection);
                     this.connection.Open();
