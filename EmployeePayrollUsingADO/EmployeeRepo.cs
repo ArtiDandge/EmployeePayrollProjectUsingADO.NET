@@ -23,7 +23,7 @@ namespace EmployeePayrollUsingADO
                     SqlCommand cmd = new SqlCommand(query, this.connection);
 
                     this.connection.Open();
-                    Console.WriteLine("\nDatabased Connected");
+                    Console.WriteLine("\nDatabased Connection OK !");
                     SqlDataReader dr = cmd.ExecuteReader();
                     if (dr.HasRows)
                     {
@@ -42,7 +42,8 @@ namespace EmployeePayrollUsingADO
                             employeeModel.income_tax = Convert.ToDouble(dr.GetDecimal(10));
                             employeeModel.net_pay = Convert.ToDouble(dr.GetDecimal(11));
 
-                            Console.WriteLine("{0}, {1}, {2}, {3}, {4}, {5}", employeeModel.id, employeeModel.name, employeeModel.basic_pay, employeeModel.start_date, employeeModel.gender, employeeModel.address);
+                            Console.WriteLine("{0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11}", employeeModel.id, employeeModel.name, employeeModel.basic_pay, employeeModel.start_date, employeeModel.gender, employeeModel.address,
+                                employeeModel.phone_number, employeeModel.department, employeeModel.deduction, employeeModel.taxable_pay, employeeModel.income_tax, employeeModel.net_pay);
                             Console.WriteLine("\n");
                         }
                     }

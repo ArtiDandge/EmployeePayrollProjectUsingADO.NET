@@ -23,8 +23,8 @@ namespace EmployeePayrollUsingADO
             employee.income_tax = 44400.40;
             employee.net_pay = 550000.00;
 
-            repo.AddEmployee(employee);
-            //repo.GetAllEmployee();
+            //repo.AddEmployee(employee);
+            repo.GetAllEmployee();
         }
     }
 }
