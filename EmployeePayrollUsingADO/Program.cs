@@ -25,7 +25,8 @@ namespace EmployeePayrollUsingADO
 
             //repo.AddEmployee(employee);
             //repo.GetAllEmployee();
-            repo.GetPerticularEmployeeData();
+            //repo.GetPerticularEmployeeData();
+            repo.AggregateFunctionOperations();
         }
     }
 }
