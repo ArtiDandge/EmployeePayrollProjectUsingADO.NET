@@ -24,7 +24,8 @@ namespace EmployeePayrollUsingADO
             employee.net_pay = 550000.00;
 
             //repo.AddEmployee(employee);
-            repo.GetAllEmployee();
+            //repo.GetAllEmployee();
+            repo.GetPerticularEmployeeData();
         }
     }
 }
