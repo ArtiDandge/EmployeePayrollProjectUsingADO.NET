@@ -7,6 +7,8 @@ namespace EmployeePayrollUsingADO
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Employee Payroll Service Project Using ADO.NET Framework!");
+            EmployeeRepo repo = new EmployeeRepo();
+            repo.CheckConnection();
         }
     }
 }
